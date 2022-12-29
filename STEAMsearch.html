@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/STEAM.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Rubik+Spray+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header responsive">
+        <div id="responsive_menu_logo" class="menu_logo">
+          <img
+            src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_menu_hamburger.png"
+            height="100%"
+          />
+        </div>
+        <div class="steam-logo">
+          <a href="./STEAM.html"
+            ><img
+              src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png"
+              alt="Steam_icon_logo"
+              height="50px"
+          /></a>
+          <ul class="nav_link">
+            <li class="link"><a href="#"></a>Home</li>
+            <li class="link"><a href="#"></a>Community</li>
+            <li class="link"><a href="#"></a>Support</li>
+          </ul>
+        </div>
+        <div class="responsive_menu">
+          <form action="#" id="form-search">
+            <input
+              type="text"
+              id="input-name"
+              class="input"
+              name="q"
+              placeholder="Search for game"
+            />
+            <button
+              type="submit"
+              id="btn-input"
+              class="btn name"
+              form="form-search"
+            >
+              <span class="material-symbols-outlined">search</span>
+            </button>
+          </form>
+          <div class="genre">
+            <details>
+              <summary>
+                <p>Genres</p>
+              </summary>
+              <ul id="list-genres"></ul>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <main>
+      <div class="container">
+        <div class="category">
+          <h1 id="category-title" class="title"></h1>
+          <div id="category-list"></div>
+          <div class="more">
+            <a>More</a>
+            <span class="material-symbols-outlined" style="color: white">
+              expand_more
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/STEAMsearch.js"></script>
+  </body>
+</html>

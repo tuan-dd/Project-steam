@@ -1,0 +1,805 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+header {
+  flex-shrink: 0;
+  height: fit-content;
+  background: #171a21;
+  padding: 0.5em 1em;
+}
+
+.header.responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  position: relative;
+}
+
+/* menu logo */
+.header.responsive .menu_logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25%;
+  left: 5px;
+}
+
+.header.responsive .menu_logo.none {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.header.responsive .menu_logo:hover {
+  cursor: pointer;
+}
+
+/* .header.responsive .menu_logo:focus {
+    cursor: pointer;
+} */
+
+/* logo steam */
+.header.responsive .steam-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header.responsive .steam-logo .nav_link {
+  display: flex;
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.header.responsive .steam-logo .nav_link li {
+  margin-left: 0px;
+  font-size: 1.2em;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  font-size: 1.6vmax;
+  -webkit-text-stroke-width: 0.11vmax;
+  font-family: "Balsamiq Sans", cursive;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: #040404;
+}
+
+.steam-logo .nav_link li:hover {
+  cursor: pointer;
+  filter: brightness(140%);
+}
+
+/* menu responsive_menu */
+
+.header.responsive .responsive_menu {
+  display: none;
+  flex-direction: column;
+  /* justify-self: start; */
+  position: absolute;
+  top: 0px;
+  left: -15px;
+  width: 21vw;
+  /* height: auto; */
+  color: rgb(255, 255, 255);
+  background: #1c1a1a;
+  z-index: 110;
+}
+
+.header.responsive .responsive_menu.none {
+  display: flex;
+}
+
+/* form  */
+.header.responsive form {
+  position: relative;
+  /* bottom: 0px; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* .header.responsive form label {
+    display: block;
+    text-align: center;
+    font-size: larger; 
+    opacity: 1;
+    width: 100%;
+    font-size: 2.6vmax;
+    font-family: "Balsamiq Sans", cursive;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: #040404;
+    -webkit-text-stroke-width: 0.2vmax; 
+} */
+
+.header.responsive input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #ffffff;
+  width: 90%;
+}
+
+.header.responsive button.btn.name {
+  position: absolute;
+  right: 20px;
+  bottom: 3px;
+  border: none;
+  background: none;
+  color: rgb(4, 4, 4);
+}
+
+/* .genre  */
+/* .responsive_menu .genre details {
+    width: 100%; */
+/* padding: 20px;
+} */
+
+.responsive_menu .genre details {
+  background-color: #000000;
+}
+
+.responsive_menu .genre summary {
+  /* display: flex; */
+  /* justify-content: center; */
+  line-height: 1.7;
+  padding: 6px;
+  cursor: pointer;
+  transform: scaleX(-1);
+  /* position: relative; */
+  height: 40px;
+}
+
+.responsive_menu .genre summary p {
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  right: 10px;
+  transform: scaleX(-1);
+  font-size: 1.2em;
+  font-family: "Balsamiq Sans", cursive;
+  /* -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: #040404;
+    -webkit-text-stroke-width: 0.2vmax; */
+}
+
+.responsive_menu .genre details ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-top: 5px;
+}
+
+/* .responsive_menu .genre details li {
+    font-size: 0.8em;
+    padding: 5px 0;
+    font-family: 'Nerko One', cursive;
+    color: rgb(255, 255, 255);
+} */
+
+.responsive_menu .genre details ul li .btn.genre {
+  margin: 5px 0;
+  cursor: pointer;
+  width: 70%;
+  /* height: auto; */
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Balsamiq Sans";
+  background-color: rgb(0, 0, 0);
+  color: white;
+  /* opacity: 0.9; */
+  transition: all 1s;
+  transition-delay: 0.3s;
+  transition-timing-function: ease-in-out;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.responsive_menu .genre details ul li .btn.genre:hover,
+.responsive_menu .genre details ul li .btn.genre:focus {
+  width: 100%;
+  height: 45px;
+  /* opacity: 1; */
+  color: aliceblue;
+  background: linear-gradient(
+    90deg,
+    rgba(62, 103, 150, 0.919) 11.38%,
+    rgba(58, 120, 177, 0.8) 25.23%,
+    rgb(15, 33, 110) 100%
+  );
+  font-size: 17px;
+  filter: brightness(150%);
+}
+
+/* main  */
+main {
+  display: flex;
+  flex-grow: 1;
+  /* height: 100%; */
+}
+
+/* .container */
+main .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3vh;
+  padding-bottom: 10vh;
+  /* padding-left: 2px; */
+  width: 100%;
+  height: 100%;
+  background: url(https://img.freepik.com/free-vector/space-game-level-background-with-platforms_107791-3660.jpg?w=2000)
+      repeat center top,
+    #010404;
+}
+
+h1 {
+  /* display: block; */
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #2e689d;
+  text-shadow: #fff 0 -1px 4px, rgb(228, 165, 16) 0 -2px 10px,
+    #a22b8e 0 -10px 20px, rgb(205, 0, 0) 0 -18px 40px;
+  text-transform: capitalize;
+}
+
+.category,
+.bestgame {
+  background: #1b2838;
+  margin: auto;
+  padding: 1vw;
+  width: 90vw;
+
+  /* height: auto; */
+
+  /* height: max-content; */
+}
+
+.container .bestgame {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.container #bestgame-list {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  column-gap: 10px;
+  overflow-x: auto;
+  width: 85vw;
+  height: auto;
+  white-space: nowrap;
+  margin: 5px auto;
+  padding-bottom: 45px;
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  cursor: pointer;
+  height: 6px;
+  width: 6px;
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  border-radius: 10px;
+}
+
+.container #category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1vw;
+  row-gap: 15px;
+}
+
+/* // .item-game */
+.item-game {
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+  width: 21vw;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.item-game:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.item-game div {
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  padding: 5px;
+  background: linear-gradient(
+    -45deg,
+    rgba(64, 121, 153, 1) 5%,
+    rgba(42, 62, 89, 1) 95%
+  );
+  color: aliceblue;
+  /* height: 40px; */
+  font-size: 1em;
+  height: fit-content;
+}
+
+.item-game img {
+  /* width: 100%; */
+  /* width: fit-content; */
+  height: 100%;
+}
+
+.item-game.best {
+  display: flex;
+  /* flex-grow: 1; */
+  width: 460px;
+  height: 215px;
+  /* margin-left: 2px; */
+}
+
+/* .game-detail */
+.game-detail {
+  display: flex;
+  /* flex-grow: 1; */
+  width: 80vw;
+  /* height: 380px; */
+  margin: 20px auto;
+  /* height: fit-content; */
+  /* object-fit: contain; */
+}
+
+.game-detail img {
+  /* height: 100%; */
+  width: 50%;
+  /* object-fit: contain; */
+}
+
+.game-detail div {
+  display: flex;
+  flex-direction: column;
+  /* padding: 5px; */
+  padding-left: 2px;
+  background: linear-gradient(
+    -45deg,
+    rgba(64, 121, 153, 1) 5%,
+    rgba(42, 62, 89, 1) 95%
+  );
+  color: aliceblue;
+  /* font-size: 1em; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-detail div .description {
+  font-family: "Sevillana", cursive;
+  font-size: 1.2em;
+}
+
+.game-detail div .detail-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2, 20px);
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  font-style: italic;
+  font-size: 0.7em;
+  color: red;
+  padding: 5px 0;
+}
+
+.game-detail div .steamspy_tags,
+.game-detail div .categories {
+  margin: 5px 0;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+p.steamspy_tags span {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.game-detail div .categories .tags {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  color: #67c1f5;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: rgba(103, 193, 245, 0.2);
+  padding: 2px 5px;
+}
+
+.game-detail div .categories .tags:hover {
+  filter: brightness(140%);
+}
+
+/* arrow handle  */
+
+.handle-next.right,
+.handle-next.left {
+  position: absolute;
+  top: 30%;
+  /* right: 7.5vw; */
+  /* margin-top: 25%; */
+  /* margin-bottom: 25%; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  color: rgb(255, 255, 255);
+  /* height: 0px;
+    width: 0px; */
+  height: 150px;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.handle-next.right {
+  right: 2.5vw;
+}
+
+.handle-next.left {
+  left: 2.5vw;
+}
+
+.handle-next:hover {
+  filter: brightness(150%);
+  opacity: 0.7;
+  border-radius: 10px;
+  background-color: rgb(68, 66, 66);
+}
+
+/* more  */
+.more {
+  text-align: end;
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.more a {
+  font-size: 1.2vmax;
+  font-family: "Balsamiq Sans", cursive;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: #040404;
+  -webkit-text-stroke-width: 0.08vmax;
+}
+
+.more:hover {
+  filter: brightness(150%);
+}
+
+.more:active,
+.more a:active {
+  font-family: "Balsamiq Sans", cursive;
+  -webkit-text-fill-color: rgb(243, 8, 8);
+  -webkit-text-stroke-color: #040404;
+  -webkit-text-stroke-width: 0.1vmax;
+}
+
+span.material-symbols-outlined.now {
+  position: relative;
+  top: 8px;
+  right: 0px;
+  font-size: 30px;
+}
+
+/* animation: */
+main.none {
+  display: none;
+}
+
+.center {
+  height: 100vh;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, cyan, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header.responsive .steam-logo .nav_link li {
+    font-size: 2.5vmax;
+    -webkit-text-stroke-width: 0.1vmax;
+  }
+
+  .responsive_menu .genre summary p {
+    top: 6px;
+    font-size: 1em;
+  }
+
+  .header.responsive .responsive_menu {
+    width: 30vw;
+  }
+
+  .item-game {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    width: 28vw;
+  }
+
+  .item-game div {
+    padding: 5px 0;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+    /* height: 30px; */
+  }
+
+  .more a {
+    margin-top: 3px;
+    font-size: 2vmax;
+    -webkit-text-stroke-width: 0.15vmax;
+  }
+
+  span.material-symbols-outlined.now {
+    position: relative;
+    top: 7.5px;
+    right: 0px;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .game-detail div .description {
+    font-size: 0.9em;
+  }
+
+  .game-detail div .detail-info {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 20px);
+    text-transform: capitalize;
+    font-size: 0.5em;
+  }
+
+  .game-detail div .steamspy_tags,
+  .game-detail div .categories {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header.responsive .steam-logo .nav_link li {
+    font-size: 3vmax;
+    -webkit-text-stroke-width: 0.1vmax;
+  }
+
+  .header.responsive .responsive_menu {
+    width: 30vw;
+  }
+
+  .header.responsive button.btn.name {
+    right: 6px;
+  }
+
+  .responsive_menu .genre summary p {
+    top: 6px;
+    font-size: 1em;
+  }
+
+  .item-game {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    width: 42vw;
+  }
+
+  .item-game div {
+    padding: 5px 0;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+    /* height: 30px; */
+  }
+
+  .more a {
+    margin-top: 5px;
+    font-size: 2.4vmax;
+    -webkit-text-stroke-width: 0.15vmax;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  span.material-symbols-outlined.now {
+    position: relative;
+    top: 8px;
+    right: 0px;
+    font-size: 25px;
+  }
+
+  .game-detail div .description {
+    font-size: 0.9em;
+  }
+
+  .game-detail div .detail-info {
+    font-size: 0.5em;
+  }
+
+  .game-detail div .steamspy_tags,
+  .game-detail div .categories {
+    font-size: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header.responsive .steam-logo .nav_link li {
+    font-size: 3vmax;
+    -webkit-text-stroke-width: 0.1vmax;
+  }
+
+  .header.responsive .responsive_menu {
+    width: 50vw;
+    font-size: 15px;
+  }
+
+  .responsive_menu .genre summary p {
+    top: 8px;
+    font-size: 1em;
+  }
+
+  .header.responsive .menu_logo {
+    top: 6%;
+    left: -5px;
+  }
+
+  .header.responsive .responsive_menu input {
+    font-size: 12px;
+  }
+
+  .header.responsive button.btn.name {
+    right: 4px;
+  }
+
+  .item-game {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    width: 70vw;
+  }
+
+  .item-game div {
+    padding: 5px 0;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+    /* height: 30px; */
+  }
+
+  .more a {
+    margin-top: 5px;
+    font-size: 3vmax;
+    -webkit-text-stroke-width: 0.2vmax;
+  }
+
+  span.material-symbols-outlined.now {
+    position: relative;
+    top: 5px;
+    right: 0px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .material-symbols-outlined {
+    font-size: 18px;
+  }
+
+  .game-detail {
+    flex-direction: column;
+  }
+
+  .game-detail img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .game-detail div .description {
+    font-size: 0.8em;
+  }
+}
